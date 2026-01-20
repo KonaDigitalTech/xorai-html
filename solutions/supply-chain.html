@@ -16,63 +16,7 @@
 
 <body>
   <div class="relative overflow">
-    <div class="topbar">
-      <div class="">
-        <div class="header">
-          <h1><a href="../index.html"><img src="../images/logo.png" alt="XoraiNow" class="logo"></a></h1>
-<div class="hamburger" id="menuToggle">
-    <i class="ri-menu-line"></i>
-  </div>
-          <nav id="mainNav">
-            <ul class="menu flex align-items-center">
-              <li class="dropdown">
-                <a href="../industries/index.html">Industries <i class="ri-arrow-down-s-line"></i></a>
-                <ul class="submenu">
-                  <li><a href="../industries/education.html">Education</a></li>
-                  <li><a href="../industries/healthcare.html">Healthcare</a></li>
-                  <li><a href="../industries/retail.html">Retail</a></li>
-                  <li><a href="../industries/financial-services.html">Financial Services</a></li>
-                  <li><a href="../industries/energy.html">Energy</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="index.html">Solutions <i class="ri-arrow-down-s-line"></i></a>
-                <ul class="submenu">
-                  <li><a href="it.html">IT Service Management (ITSM)</a></li>
-                  <li><a href="crm.html">Customer Relationship Management (CRM)</a></li>
-                  <li><a href="hr.html">HR Service Delivery (HRSD)</a></li>
-                  <li><a href="security-risk.html">Security & Risk (GRC)</a></li>
-                  <li><a href="finance.html">Finance & Operations</a></li>
-                  <li><a href="supply-chain.html">Supply Chain Management</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="../services/index.html">Services <i class="ri-arrow-down-s-line"></i></a>
-                <ul class="submenu">
-                  <li><a href="../services/implementation.html">Implementation</a></li>
-                  <li><a href="../services/consulting.html">Consulting</a></li>
-                  <li><a href="../services/staffing.html">Staffing</a></li>
-                  <li><a href="../services/training.html">Training</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="../resources/index.html">Resources <i class="ri-arrow-down-s-line"></i></a>
-                <ul class="submenu">
-                  <li><a href="../resources/blogs.html">Blogs</a></li>
-                  <li><a href="../resources/documents.html">Documents</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="../company/index.html">Company <i class="ri-arrow-down-s-line"></i></a>
-                <ul class="submenu">
-                  <li><a href="../company/about.html">About Us</a></li>
-                  <li><a href="../company/events.html">Events</a></li>
-                  <li><a href="../company/careers.html">Careers</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <a href="../contact.html" class="btn btn-green">Let's talk <i class="ri-smartphone-line"></i></a>
-        </div>
-      </div>
-    </div>
+   <div id="header-placeholder"></div>
 <div id="content-wrapper" class="relative overflow">
     <div class="herobanner">
       <h4 class="fade-section">Build Supply Chain Resilience
@@ -166,53 +110,7 @@
     </div>
 
      </div>
-    <footer class="text-center footer">
-      <div>
-        <div class="container">
-          <div>
-            <h4>Ready to Build Supply Chain Resilience?</h4>
-            <a href="../contact.html" class="btn btn-green mt-3">Let's Talk <i class="ri-arrow-right-line"></i></a>
-          </div>
- <img src="../images/logo.png" class="frlogo">
-          <div class="row ftmenu">
-            <div class="col-md-2">
-              &nbsp;
-            </div>
-            <div class="col-md-1"> &nbsp;</div>
-            <div class="col-md-3">
-              <h5>Industries</h5>
-              <ul>
-                <li><a href="../industries/education.html"><i class="ri-arrow-right-line"></i> Education</a></li>
-                <li><a href="../industries/healthcare.html"><i class="ri-arrow-right-line"></i> Healthcare</a></li>
-                <li><a href="../industries/retail.html"><i class="ri-arrow-right-line"></i> Retail</a></li>
-                <li><a href="../industries/financial-services.html"><i class="ri-arrow-right-line"></i> Financial Services</a></li>
-                <li><a href="../industries/energy.html"><i class="ri-arrow-right-line"></i> Energy</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <h5>Solutions</h5>
-              <ul>
-                <li><a href="it.html"><i class="ri-arrow-right-line"></i> IT Service Management</a></li>
-                <li><a href="crm.html"><i class="ri-arrow-right-line"></i> CRM</a></li>
-                <li><a href="hr.html"><i class="ri-arrow-right-line"></i> HR Service Delivery</a></li>
-                <li><a href="security-risk.html"><i class="ri-arrow-right-line"></i> Security & Risk</a></li>
-                <li><a href="finance.html"><i class="ri-arrow-right-line"></i> Finance & Operations</a></li>
-                <li><a href="supply-chain.html"><i class="ri-arrow-right-line"></i> Supply Chain</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <h5>Contact</h5>
-              <p> <strong>hello@xorainow.com</strong> </p>
-              <p>
-                <strong>Global Headquarters:</strong><br>Guwahati, India<br><br>
-                <strong>Delivery Centers:</strong><br>Hyderabad | Noida<br><br>
-                <strong>Client Offices:</strong><br>Dubai, UAE | United States
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <div id="footer-placeholder"></div>
     <div class="trail"></div>
   
   <div class="topbg"></div>
@@ -285,6 +183,20 @@ menuToggle.addEventListener('click', () => {
         }
     });
 });</script>
+<script>
+  // Function to load HTML into a placeholder
+  function loadElement(id, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      });
+  }
+
+  // Call the function for header and footer
+  loadElement('header-placeholder', 'https://xorai-html.vercel.app/includes/header.html');
+  loadElement('footer-placeholder', 'https://xorai-html.vercel.app/includes/footer.html');
+</script>
 </body>
 
 </html>

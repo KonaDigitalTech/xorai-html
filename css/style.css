@@ -2077,6 +2077,13 @@
 .innerboxes.three .dbox {
     min-height: 300px !important;}
 .cntactaddress{background: linear-gradient(269deg, #37beb24d, transparent);padding: 100px;border-radius: 0 30px 30px 30px;}
+.industriescol .fbox:before, .industriescol .fbox:after{ display: none;}
+.industriescol .fone {
+    padding: 50px 50px;}
+
+
+
+
 
 
 
