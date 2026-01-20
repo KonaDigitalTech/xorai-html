@@ -256,7 +256,7 @@
           border: 1px solid rgba(98, 216, 78, 0.2) !important;
           border-radius: 10px !important;
           margin-bottom: 15px !important;
-          background: rgba(17, 17, 17, 0.5) !important;
+          /* background: rgba(17, 17, 17, 0.5) !important; */
           transition: all 0.3s ease !important;
           overflow: hidden;
         }
@@ -267,7 +267,7 @@
         }
         
         .faq .accordion-body {
-          background-color: rgba(17, 17, 17, 0.3) !important;
+          /* background-color: rgba(17, 17, 17, 0.3) !important; */
           color: rgba(255, 255, 255, 0.9) !important;
           border-radius: 0 0 10px 10px !important;
         }
@@ -275,7 +275,7 @@
           padding: 60px 20px;
           /* background: radial-gradient(ellipse at center, #003d22 0%, #000 100%); */
         }
-        .topbg{position: fixed;top: 34px;left: 0px;right: 0px;background-image: url(../images/topbg.svg);background-size: cover;background-position: center;z-index: 1;heigh;height: 100%;round-repeat: no-repeat;background-attachment: ce;bottom: 0;}
+        .topbg{position: fixed;top: 34px;left: 0px;right: 0px;background-image: url(../images/topbg.svg);background-size: cover;background-position: center;z-index: -1;height: 100%; background-attachment: fixed;bottom: 0; }
     
         .relative{position: relative; z-index: 3;}
     
@@ -307,7 +307,7 @@
     .header h1{margin: 0;font-size: 30px;line-height: normal;}
     .topbar{padding: 0;position: relative;z-index: 9999;}
     .herobanner{padding: 200px 0 100px;text-align: center;position: relative;z-index: 1;}
-    .herobanner h1{font-weight: 100;text-align: center;font-size: 120px;margin: 0 0 50px;line-height: 120px;}
+    .herobanner h1{font-weight: 100;text-align: center;font-size: 120px;margin: 0 0 20px;line-height: 120px;}
     .herobanner p{
         text-align: center;
         color: #fff;
@@ -458,7 +458,7 @@
             }
     
             .ideas .col-md-4 h4 {
-                font-size: 46px;
+                font-size: 40px;
                 font-weight: bold;
                 margin: 0 0 20px;
                 /* Default gradient for all numbers */
@@ -522,7 +522,7 @@
     
     .grow{max-width: unset;margin: auto;padding: 70px;border: 0solid #ffffff14;border-radius: 10px;text-align: left;box-shadow: 200px 0px 100px #11859b47;margin-top: 100px;}
     
-    .grow h4{margin: 0 0 30px;font-size: 80px;font-weight: 500;}
+    .grow h4{margin: 0 0 30px;font-size: 80px;font-weight:400;}
     
      
     .grow ul li{
@@ -535,9 +535,10 @@
         /* line-height: 40px; */
     }
     .grow h5{
-        margin: 50px 0 30px;
-        font-size: 49px;
+        margin: 50px 30px 30px;
+        font-size: 50px;
         font-weight: 500;
+        /* text-align: center; */
     }
       
     .calltoday{
@@ -599,7 +600,7 @@
     .portfolio{max-width: unset;margin: auto;}
     .portfolio h3{font-size: 116px;text-transform: uppercase;background: linear-gradient(180deg, #f1f9f9 0%, #577c4b 50%, #084b0d 100%);color: transparent;background-clip: text !important;-webkit-background-clip: text !important;margin: 0;font-weight: bold;/* line-height: unset; */}
     .fwidth{width: 100%;}
-    .pslider{position: relative;margin-top: -53px;background: 0;display: flex;gap: 10px;padding: 0;border-radius: 10px;box-shadow: 0 0 130px #000;}
+    .pslider{position: relative;background: 0;display: flex;gap: 30px;padding: 30px;border-radius: 10px;/* box-shadow: 0 0 130px #000; */}
     .lslideimg{position: relative;}
     .bg1{ position: absolute; left: 0; top: 0; bottom: 0; padding: 30px; background-color: #505050; width: 50%;}
     .lslideimg h4{ font-size: 40px; text-align: left;}
@@ -607,8 +608,8 @@
     .pslider .owl-dots{display: block !important;position: absolute;bottom: 20px;left: 20px;display: flex !important;gap: 10px;}
     .pslider .owl-dots .owl-dot{ width: 10px; height: 10px; background-color: #CECECE; border-radius: 50%;}
     .pslider .owl-dots .owl-dot.active{ background-color: #fff;}
-    
-    
+    .project-info h4{font-size: 30px;margin: 30px 0 10px;}
+        .project-info p{font-size: 20px;margin: 0 20px;}
     
     
     .faq #faqAccordion{ padding: 0 100px;}
@@ -627,18 +628,20 @@
     }
     .faq #faqAccordion .accordion-header button{
         border: none !important;
-        background: none;
+        background: none !important;
         color: #fff;
         font-size: 30px;
         font-weight: 100;
-        padding: 30px 0;
+        padding: 30px 40px;
         box-shadow: 0 0 0;
+        background: none;
     }
      
     .faq #faqAccordion .accordion-body{
         border: none;
         background: none;
-        padding: 0 0 30px;
+        padding: 0 40px 30px;
+        font-size: 20px;
     }
     .faq h4{font-size: 100px;margin: 0 0 50px;}
     .footer{/* background-image: url(../images/footerbg.png); */background-size: cover;height: auto;background-position: bottom center; border: 0px solid #aaaaaa54;border-width: 0;padding: 0px 0 50px;margin: 0;background: linear-gradient(360deg, #092550, #075e3447);}
@@ -652,7 +655,7 @@
     
     .ideas h3 span{background: linear-gradient(180deg, #DADCDC -7.42%, #000000 162.83%);color: transparent;background-clip: text !important;-webkit-background-clip: text !important;}
     .grow h4 span{text-decoration: none;position: relative;}
-    .grow h4 span::after{position: absolute;bottom: 8px;left: 0;right: 0;content: "";background: #11caed;height: 1px;}
+    .grow h4 span::after{position: absolute;bottom: 8px;left: 0;right: 0;content: "";background: #62d84e;height: 1px;}
     
     .calltoday h3 span{ position: relative;}
     .calltoday h3 span::after{position: absolute;bottom: 8px;left: 0;right: 0;content: "";background: #fff;height: 1px;}
@@ -668,7 +671,7 @@
         .accordion-button::after{display: none;}
         .fa-solid{ font-size: 18px;}
         .logo{width: 250px;}
-        .herobanner h4{font-weight: 100;font-size: 18px;color: #fff;margin: 0 0 20px;}
+        .herobanner h4{font-weight: 100;font-size: 18px;color: #fff;margin: 0 0 40px;letter-spacing: 0.8px;}
         .menu{display: flex;gap: 20px;list-style: none;margin: 0;padding: 0;}
         .menu li a{color: #fff;text-decoration: none;font-size: 16px;font-weight: 100;letter-spacing: 2px;position: relative;padding: 25px 0;display: block;text-transform: uppercase;}
         .menu li a::after {
@@ -719,13 +722,14 @@
                 color: transparent;
                 background-clip: text !important;
                 -webkit-background-clip: text !important;
+                display: block;
                 }
     .dbox{
         background: rgba(255, 255, 255, 0.05);
         padding: 50px;
         border-radius: 15px;
         min-height: 400px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
         margin-bottom: 120px;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid rgba(98, 216, 78, 0.1);
@@ -755,7 +759,7 @@
         left: 100%;
     }
     
-    .bookcol{display: flex;align-items: center;justify-content: space-between;}
+    .bookcol{display: flex;align-items: center;justify-content: space-between;padding: 30px 0 0;}
     .pslider img{border-radius: 10px;width: 100%;}
     .dcnt{min-height: 250px;}
         .fbox {
@@ -768,9 +772,11 @@
             z-index: 9;
         }.frowbox {
             display: flex;
+            align-items: center;
         }
         .fone {
-            padding: 50px 87px;
+            padding: 50px 100px;
+            width: 50%;
         }
         .iconone {
             width: 80px;
@@ -813,7 +819,7 @@
         .fone h3 {
             font-size: 30px;
             font-weight: 500;
-            margin: 20px 0;
+            margin: 30px 0 10px;
         }
         .fbox:before {
             height: 1px;
@@ -836,7 +842,7 @@
         }
          
         .inducol{ padding: 100px 0;} 
-    .fone p{ font-size: 18px;}
+    .fone p{font-size: 22px;margin: 0 0 30px;background: linear-gradient(180deg, #DADCDC -7.42%, #0000008a 162.83%);color: transparent;background-clip: text !important;-webkit-background-clip: text !important;}
     .grow ul li {
         display: flex;
         gap: 10px;
@@ -997,13 +1003,13 @@
       .ftmenu ul{ list-style-type: none; padding: 0;}
       .ftmenu ul li{margin: 0;padding: 0 0 10px;}
       .ftmenu ul li a{color: #6d9eb2;text-decoration: none;}
-      .ftmenu{padding-top: 100px;text-align: left;align-items: center;}
+      .ftmenu{padding-top: 100px;text-align: left;align-items: start;}
       .ftmenu h5{
         text-transform: uppercase;
         font-weight: 400;
         margin: 0 0 20px;
     }
-      .ftmenu  p{color: #6d9eb2;line-height: 30px;}
+      .ftmenu  p{color: #6d9eb2;line-height: 30px;margin: 0;}
     .angle{position: absolute;top: -65px;right: -50px;opacity: 0.5;}
     
     
@@ -1735,7 +1741,7 @@
     input[type="number"],
     textarea,
     select {
-        background: rgba(17, 17, 17, 0.8) !important;
+        background: #62d84e17 !important;
         border: 2px solid rgba(98, 216, 78, 0.2) !important;
         color: #fff !important;
         padding: 15px 20px !important;
@@ -1752,9 +1758,9 @@
     textarea:focus,
     select:focus {
         outline: none !important;
-        border-color: #62d84e !important;
+        border-color: #62d84e61 !important;
         box-shadow: 0 0 0 3px rgba(98, 216, 78, 0.1) !important;
-        background: rgba(17, 17, 17, 0.95) !important;
+        /* background: rgba(17, 17, 17, 0.95) !important; */
         transform: translateY(-2px);
     }
     
@@ -1778,10 +1784,10 @@
     /* Enhanced Card Styles */
     .dbox {
         background: rgba(255, 255, 255, 0.05);
-        padding: 50px;
+        padding: 40px;
         border-radius: 15px;
         min-height: 400px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
         margin-bottom: 120px;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid rgba(98, 216, 78, 0.1);
@@ -1873,7 +1879,7 @@
         bottom: 0;
         left: 50%;
         width: 0;
-        height: 2px;
+        height: 1px;
         background: linear-gradient(90deg, #62d84e, #247417);
         transform: translateX(-50%);
         transition: width 0.3s ease;
@@ -1885,7 +1891,7 @@
     }
     
     .menu li a:hover::after {
-        width: 80%;
+        width: 100%;
     }
     
     .menu li a.active {
@@ -1906,17 +1912,19 @@
         left: 0;
         border: 0px solid #ccc;
         list-style: none;
-        padding: 15px 0 20px;
+        padding: 0;
         z-index: 999999;
-        min-width: 280px;
-        border-radius: 0 0 15px 15px;
-        background: linear-gradient(180deg, rgba(17, 133, 155, 0.95) 0%, rgba(22, 41, 34, 0.98) 100%);
+        min-width: max-content;
+        border-radius: 0;
+        background: linear-gradient(180deg, rgb(17 133 155 / 97%) 0%, rgb(29 150 100 / 91%) 100%);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
         opacity: 0;
         transform: translateY(-10px);
         transition: all 0.3s ease;
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(5px);
     }
     
     .dropdown:hover .submenu {
@@ -1927,14 +1935,15 @@
     
     .submenu li a {
         color: #fff;
-        padding: 12px 30px;
+        padding: 15px 30px;
         line-height: normal;
         text-transform: unset;
         font-weight: 400;
         display: block;
         transition: all 0.3s ease;
-        border-left: 3px solid transparent;
+        border-left: 0px solid transparent;
         letter-spacing: normal;
+        min-width: 198px;
     }
     
     .submenu li a:hover {
@@ -1942,20 +1951,22 @@
         border-left-color: #62d84e;
         padding-left: 40px;
         color: #62d84e;
-        transform: translateX(5px);
+        transform: translateX(0px);
     }
     
     /* Enhanced List Items */
     .grow ul li {
         display: flex;
         gap: 10px;
-        padding: 10px 0;
+        padding: 20px 0;
         font-size: 35px;
         font-weight: 100;
         align-items: center;
         transition: all 0.3s ease;
-        border-left: 3px solid transparent;
-        padding-left: 15px;
+        border-left: 0px solid transparent;
+        padding-left: 0;
+        border-bottom: 1px solid #eeeeee3d;
+        line-height: normal;
     }
     
     .grow ul li:hover {
@@ -2005,7 +2016,7 @@
         box-shadow: 0 20px 60px rgba(0, 191, 99, 0.3);
         border-color: rgba(98, 216, 78, 0.4);
     }
-    
+    .frowbox a{color: #fff;text-decoration: none;}
     @keyframes pulse {
         0%, 100% {
             transform: scale(1);
@@ -2016,3 +2027,58 @@
             opacity: 0.8;
         }
     }
+    .grow ul li em{display: block;font-style: normal; background-clip: text;-webkit-text-fill-color: transparent;background: linear-gradient(355deg, rgb(17 255 173) 0%, rgb(158 228 83) 48.1%, rgb(0 115 48) 100%);background-clip: text;font-weight: 500;}
+.grow ul li:last-child{ border: none;}
+.submenu:after {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  
+  /* This creates a downward pointing arrow */
+  border-bottom: 10px solid #11859bf7; position: absolute; content: ""; left: 50px; top: -10px;
+}
+.frowbox a {
+    color: #62d84e;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.frowbox a:hover::after {
+    width: 100%;
+}
+.frowbox a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #62d84e;
+    transition: width 0.3s ease;
+}
+.frowbox a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+.btmlogo{ padding: 50px 20px 0 0;}
+.innerboxes .dbox{min-height: 359px !important;margin: 0 0 30px;padding: 30px;}
+.innerboxes .dbox h4{margin: 0 0 30px;background-clip: text;-webkit-text-fill-color: transparent;background: linear-gradient(355deg, rgb(17 255 173) 0%, rgb(158 228 83) 48.1%, rgb(0 115 48) 100%);background-clip: text;font-size: 30px;}.innerboxes .dbox p{ font-size: 20px;}
+.padt0{ padding-top: 0 !important;}
+.mb0{ margin-bottom: 0 !important;}
+.pb30{ padding-bottom: 30px;}
+.font40{ font-size: 80px; margin-bottom: 40px; font-weight: 400;}
+.font40 b{ font-weight: 400;}
+.mt50{ margin-top: 50px; margin-bottom: 100px;}
+.innerboxes.three .dbox {
+    min-height: 300px !important;}
+.cntactaddress{background: linear-gradient(269deg, #37beb24d, transparent);padding: 100px;border-radius: 0 30px 30px 30px;}
+
+
+
+
+
