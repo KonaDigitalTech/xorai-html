@@ -2080,6 +2080,7 @@
 .industriescol .fbox:before, .industriescol .fbox:after{ display: none;}
 .industriescol .fone {
     padding: 50px 50px;}
+    select.form-control{ background-color: #3b5e42 !important;}
 
 
 
