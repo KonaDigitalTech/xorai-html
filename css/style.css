@@ -2084,17 +2084,26 @@
     select.form-control{ background-color: #3b5e42 !important;}
 .faq #faqAccordion .accordion-header button:focus{ border: none !important; box-shadow: 0 0 0 !important; }
 .subtext{font-size: 24px; margin-bottom: 50px; color: #ccc;}
+.f24{font-size: 24px; margin-bottom: 30px;}
+.keytitle{margin-top: 50px; margin-bottom: 30px}
+.cnttitle{font-size: 40px; margin-bottom: 30px;}
 
-@media (min-width: 320) and (max-width: 767px) {
-    .subtext{ font-size: 16px; margin:0 20px 30px ;}
+@media (min-width: 320px) and (max-width: 767px) {
+    .cnttitle{font-size: 30px;margin-top: -50px;}
+    .cntactaddress{    padding: 50px; 
+    margin: 40px 0 50px;}
+    .subtext{ font-size: 16px; margin:0 30px 30px ;} .subtext br{ display: none;}
+    .form-control, input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], textarea, select{    padding: 10px 20px !important;}
 .herobanner h4{margin: 0 0 10px;}
-.herobanner h1{        line-height: 50px;}.dbox{ min-height: auto; margin: 0 20px; padding: 30px;}
+.herobanner h1{        line-height: 50px;}.dbox{ min-height: auto; margin: 0 35px; padding: 30px 30px 0;}
     .ideas .col-md-4 h4 {
         font-size: 30px;
     }  .dcnt {
     min-height: auto;
     margin: 0 0 20px !important;
-}
+}.iconone {
+    width: 70px;
+    height: 70px;font-size: 35px;}
 .herobanner p {
         font-size: 15px;
         margin: 0 20px 30px;
@@ -2123,7 +2132,62 @@
 }.footer h4 {
     font-size: 30px; 
     padding: 40px 20px 0;
-}.grow ul li{ font-size: 20px;}
+}.grow ul li{font-size: 20px;text-align: center;flex-direction: column;}
+    .ideas .col-md-4 p { 
+        margin: 0 0 30px !important;
+    }
+        .fone {
+        margin-bottom: 0px;
+        text-align: center;
+    }.angle { 
+    top: -105px;
+    right: 0px; 
+    width: 150px;
+}.grow h5 br{ display: none; text-align: center !important;}.grow h5{ text-align: center;}
+.calltoday h3 { 
+    font-weight: 600;
+    font-size: 30px; 
+    text-align: center;
+}.calltoday{ text-align: center;}.calltoday h6{ font-weight: 500;}
+.section {
+    padding: 80px 20px 0;}.testimonial-box h4{ font-size: 25px; text-align: center;}
+    .testimonial-box p{ font-size: 15px; text-align: center;}.testimonial-box h6{ font-size: 18px;}
+.faster {
+    padding: 50px 20px 0;
+    text-align: center;
+}.faster p {
+    font-size: 20px;}
+.project-info h4 {
+    font-size: 25px;
+    margin: 20px 0 10px;
+}
+.project-info p {
+    font-size: 18px;
+    margin: 0 0 20px;
+}    .faq #faqAccordion {
+        padding: 0 0px;
+    }.faq #faqAccordion .accordion-body{    font-size: 18px; 
+    line-height: normal;}.faq #faqAccordion .accordion-header button{ font-size: 25px;}
+    .herobanner p br{ display: none;}
+    .grow{ margin-top: 30px;}
+    .font40 {
+    font-size: 40px;
+    margin-bottom: 20px;}
+    .innerboxes .dbox {
+    min-height: unset !important;}
+    .f24{ font-size: 18px;}
+    .innerboxes.three .dbox {
+    min-height: unset !important;
+}.innerboxes .dbox h4{ font-size: 25px;}
+.innerboxes .dbox p {
+    font-size: 18px;
+}.keytitle{ margin: 0 !important;
+        text-align: left;}
+        .grow h4 {
+        font-size: 30px;
+    }    .grow { 
+        text-align: center !important;
+    }.grow ul li strong{ display: block;}
 }
 
 
