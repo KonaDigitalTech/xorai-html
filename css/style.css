@@ -438,7 +438,7 @@
                 flex-wrap: wrap;
                 gap: 40px;
                 transform: translateY(30px);
-                opacity: 0;
+                 
                 transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
             }
     
@@ -520,7 +520,7 @@
     .testimonial-box p{font-size: 18px;text-align: left;color: #e4dada;margin: 0 0 30px;}
     .testimonial-box h6{margin: 30px 0 0;color: #BCBCBC;font-size: 20px;}
     
-    .grow{max-width: unset;margin: auto;padding: 70px;border: 0solid #ffffff14;border-radius: 10px;text-align: left;box-shadow: 200px 0px 100px #11859b47;margin-top: 100px;}
+    .grow{max-width: unset;margin: auto;padding: 70px;border: 0solid #ffffff14;border-radius: 10px;text-align: left;box-shadow: 200px 0px 100px #11859b47;margin-top: 100px; position: relative;}
     
     .grow h4{margin: 0 0 30px;font-size: 80px;font-weight:400;}
     
@@ -641,7 +641,8 @@
         border: none;
         background: none;
         padding: 0 40px 30px;
-        font-size: 20px;
+        font-size: 22px;
+        letter-spacing: 1px;
     }
     .faq h4{font-size: 100px;margin: 0 0 50px;}
     .footer{/* background-image: url(../images/footerbg.png); */background-size: cover;height: auto;background-position: bottom center; border: 0px solid #aaaaaa54;border-width: 0;padding: 0px 0 50px;margin: 0;background: linear-gradient(360deg, #092550, #075e3447);}
@@ -649,8 +650,8 @@
     .footer h4{font-size: 40px;font-weight: 200;margin: 0;padding: 100px 0 0;}
     
     .copy{padding: 300px 0 50px;font-size: 20px;}
-    .faster h4{font-size: 100px;font-weight: 200;text-align: center;margin: 0;font-weight: 500;}
-    .faster p{font-size: 40px;color: #38fcff;text-align: center;font-weight: 100;}
+    .faster h4{font-size: 100px;font-weight: 200;text-align: center;margin: 0;font-weight: 500;background: linear-gradient(180deg, #f1f9f9 0%, #577c4b 50%, #5b925f 100%);color: transparent;background-clip: text !important;-webkit-background-clip: text !important;}
+    .faster p{font-size: 40px;color: #fff;text-align: center;font-weight: 100;}
     .faster{ padding: 100px 0;}
     
     .ideas h3 span{background: linear-gradient(180deg, #DADCDC -7.42%, #000000 162.83%);color: transparent;background-clip: text !important;-webkit-background-clip: text !important;}
@@ -710,7 +711,7 @@
         .clogos div{
             font-size: 40px;
             display: flex;
-            gap: 100px;
+            gap: 130px;
             font-weight: 100;
             justify-content: center;
             opacity: 0.7;
@@ -2081,7 +2082,7 @@
 .industriescol .fone {
     padding: 50px 50px;}
     select.form-control{ background-color: #3b5e42 !important;}
-
+.faq #faqAccordion .accordion-header button:focus{ border: none !important; box-shadow: 0 0 0 !important; }
 
 
 
