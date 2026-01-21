@@ -2087,8 +2087,9 @@
 .f24{font-size: 24px; margin-bottom: 30px;}
 .keytitle{margin-top: 50px; margin-bottom: 30px}
 .cnttitle{font-size: 40px; margin-bottom: 30px;}
-
+.dropdown.open > .submenu{ opacity: 1;}
 @media (min-width: 320px) and (max-width: 767px) {
+    .menu li a{ font-size: 14px;}
     .cnttitle{font-size: 30px;margin-top: -50px;}
     .cntactaddress{    padding: 50px; 
     margin: 40px 0 50px;}
