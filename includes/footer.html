@@ -15,11 +15,13 @@
             <div class="col-md-3">
               <h5>Industries</h5>
               <ul>
-                <li><a href="https://xorai-html.vercel.app/industries/education.html"><i class="ri-arrow-right-line"></i> Education</a></li>
-                <li><a href="https://xorai-html.vercel.app/industries/healthcare.html"><i class="ri-arrow-right-line"></i> Healthcare</a></li>
-                <li><a href="https://xorai-html.vercel.app/industries/retail.html"><i class="ri-arrow-right-line"></i> Retail</a></li>
+              
                 <li><a href="https://xorai-html.vercel.app/industries/financial-services.html"><i class="ri-arrow-right-line"></i> Financial Services</a></li>
-                <li><a href="https://xorai-html.vercel.app/industries/energy.html"><i class="ri-arrow-right-line"></i> Energy</a></li>
+                <li><a href="https://xorai-html.vercel.app/industries/retail.html"><i class="ri-arrow-right-line"></i> Retail</a></li>
+             <li><a href="https://xorai-html.vercel.app/industries/healthcare.html"><i class="ri-arrow-right-line"></i> Healthcare</a></li>           
+                         <li><a href="https://xorai-html.vercel.app/industries/energy.html"><i class="ri-arrow-right-line"></i> Energy</a></li>
+            <li><a href="https://xorai-html.vercel.app/industries/education.html"><i class="ri-arrow-right-line"></i> Education</a></li>
+                           
               </ul>
             </div>
             <div class="col-md-3">
@@ -38,9 +40,9 @@
               <h5>Contact</h5>
               <p> <strong>hello@xorainow.com</strong> </p>
 
-              <p><strong>Global Headquarters:</strong><br>Guwahati, India</p>
-              <p><strong>Delivery Centers:</strong><br>Hyderabad | Noida</p>
-              <p> <strong>Client Offices:</strong><br>Dubai, UAE | United States</p>
+              <p><strong>Headquarters:</strong><br>Noida, India</p>
+              <p><strong>Delivery Centers:</strong><br>Hyderabad | Guwahati</p>
+              <p> <strong>Global Locations:</strong><br>Dubai, Riyadh ,UAE | New York, San Diego, United States</p>
                
             </div>
           </div>
@@ -167,7 +169,7 @@ menuToggle.addEventListener('click', () => {
     fetch(file)
       .then(response => response.text())
       .then(data => {
-        document.getElementById(id).innerHTML = data;
+        document.getElementById(id).innerHTML = data;  
       });
   }
 
