@@ -2083,9 +2083,48 @@
     padding: 50px 50px;}
     select.form-control{ background-color: #3b5e42 !important;}
 .faq #faqAccordion .accordion-header button:focus{ border: none !important; box-shadow: 0 0 0 !important; }
+.subtext{font-size: 24px; margin-bottom: 50px; color: #ccc;}
 
-
-
+@media (min-width: 320) and (max-width: 767px) {
+    .subtext{ font-size: 16px; margin:0 20px 30px ;}
+.herobanner h4{margin: 0 0 10px;}
+.herobanner h1{        line-height: 50px;}.dbox{ min-height: auto; margin: 0 20px; padding: 30px;}
+    .ideas .col-md-4 h4 {
+        font-size: 30px;
+    }  .dcnt {
+    min-height: auto;
+    margin: 0 0 20px !important;
+}
+.herobanner p {
+        font-size: 15px;
+        margin: 0 20px 30px;
+    }.ideas {
+    padding: 50px 0 0px;}
+        .ideas h3 { 
+        margin: 0 0 20px;
+    }
+    .fone {
+    padding: 20px;
+    width: auto;
+}.fone h3 {
+    font-size: 22px;}
+    .fone p {
+    font-size: 18px;
+    margin: 0 20px 30px;}.fbox:before, .fbox:after{ display: none;}
+    .inducol {
+    padding: 50px 0 0;
+    margin: 0 20px;
+}.hpt-text-slide-8-item {
+    font-size: 100px !important;}.calltoday{ width: auto; padding: 30px;}
+    .grow h5{    margin: 30px 0px 30px;}.pslider{ flex-direction: column;}
+    .btmlogo {
+    padding: 0px 0px 0 0;
+    width: 200px;
+}.footer h4 {
+    font-size: 30px; 
+    padding: 40px 20px 0;
+}.grow ul li{ font-size: 20px;}
+}
 
 
 

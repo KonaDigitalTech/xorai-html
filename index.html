@@ -75,7 +75,7 @@
       <div class="ideas ">
         <div class="container">
           <h3 class="fade-section"> Why <b>XoraiNow </b></h3>
-          <p class="fade-section" style="font-size: 24px; margin-bottom: 50px; color: #ccc;">In January 2026, ServiceNow CEO Bill McDermott declared this "the year of agentic <br>collaboration in the enterprise." We're here to make that vision your reality.</p>
+          <p class="fade-section subtext">In January 2026, ServiceNow CEO Bill McDermott declared this "the year of agentic <br>collaboration in the enterprise." We're here to make that vision your reality.</p>
 
           <div class="row text-center">
             <div class="col-md-4">
@@ -409,7 +409,7 @@
 
 <script>
   /**
-   * 1. NAVIGATION & DYNAMIC LOADING
+   * 1. THE DYNAMIC LOADER
    */
   function loadElement(id, file) {
     fetch(file)
@@ -418,45 +418,53 @@
         const target = document.getElementById(id);
         if (target) {
           target.innerHTML = data;
-          // Re-initialize menu listeners AFTER the HTML is injected
+          // Trigger menu setup once HTML is injected
           initMenuLogic();
         }
       })
       .catch(err => console.error('Error loading HTML:', err));
   }
 
-   // Call the function for header and footer
-  loadElement('header-placeholder', 'https://xorai-html.vercel.app/includes/header.html');
-  loadElement('footer-placeholder', 'https://xorai-html.vercel.app/includes/footer.html');
+  // Initial Load
+  loadElement('header-placeholder', 'https://xorainow.com/includes/header.html');
+  loadElement('footer-placeholder', 'https://xorainow.com/includes/footer.html');
 
-
+  /**
+   * 2. CORE MENU LOGIC
+   */
   function initMenuLogic() {
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
     const contentWrapper = document.getElementById('content-wrapper');
     const body = document.body;
 
-    // The "if(menuToggle)" check prevents the "Cannot read properties of null" error
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-        contentWrapper?.classList.toggle('blur-overlay-active');
-        body.classList.toggle('no-scroll');
+    // Safety: If elements aren't in the DOM yet, stop here. 
+    // The fetch callback will trigger this again once they arrive.
+    if (!menuToggle || !mainNav) return;
 
-        const menuIcon = menuToggle.querySelector('i');
-        if (menuIcon) {
-          if (mainNav.classList.contains('active')) {
-            menuIcon.classList.replace('ri-menu-line', 'ri-close-line');
-          } else {
-            menuIcon.classList.replace('ri-close-line', 'ri-menu-line');
-          }
+    // Remove existing listener to prevent "double-toggle" bugs
+    menuToggle.replaceWith(menuToggle.cloneNode(true));
+    const newToggle = document.getElementById('menuToggle');
+
+    newToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      mainNav.classList.toggle('active');
+      contentWrapper?.classList.toggle('blur-overlay-active');
+      body.classList.toggle('no-scroll');
+
+      const menuIcon = newToggle.querySelector('i');
+      if (menuIcon) {
+        if (mainNav.classList.contains('active')) {
+          menuIcon.className = 'ri-close-line'; // Direct class assignment is safer
+        } else {
+          menuIcon.className = 'ri-menu-line';
         }
-      });
-    }
+      }
+    });
 
-    // Initialize Mobile Dropdowns
+    // Mobile Dropdowns
     document.querySelectorAll('.dropdown > a').forEach(dropdownToggle => {
-      dropdownToggle.addEventListener('click', function (e) {
+      dropdownToggle.onclick = function(e) {
         if (window.innerWidth <= 992) {
           e.preventDefault();
           const parent = this.parentElement;
@@ -465,27 +473,22 @@
           });
           parent.classList.toggle('open');
         }
-      });
+      };
     });
   }
 
   /**
-   * 2. PAGE EFFECTS (Scroll, Owl, Mouse)
+   * 3. UI EFFECTS
    */
   document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Owl Carousel
-    const $owl = $('.owl-carousel');
-    if ($owl.length) {
-      $owl.owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        dots: true,
-        items: 1,
+    // Owl Carousel
+    if ($('.owl-carousel').length) {
+      $('.owl-carousel').owlCarousel({
+        loop: true, margin: 10, nav: false, dots: true, items: 1
       });
     }
 
-    // Intersection Observer for sections
+    // Scroll & Fade Animations
     const sections = document.querySelectorAll('.fade-section');
     const blurObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -495,42 +498,30 @@
           entry.target.classList.remove('blur-active');
         }
       });
-    }, {
-      threshold: 0.3,
-      rootMargin: '-50px 0px -50px 0px'
-    });
+    }, { threshold: 0.1 });
 
     sections.forEach(section => blurObserver.observe(section));
 
-    // Scroll Blur Effect
     window.addEventListener('scroll', () => {
       sections.forEach(section => {
         const rect = section.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           const progress = Math.min(1, Math.max(0, (window.innerHeight - rect.top) / window.innerHeight));
-          const blurAmount = progress * 8;
-          section.style.setProperty('--blur-amount', `${blurAmount}px`);
+          section.style.setProperty('--blur-amount', `${progress * 8}px`);
         }
       });
     });
-
-    // Mouse Trail Effect
-    document.addEventListener('mousemove', (e) => {
-      createTrail(e.clientX, e.clientY);
-    });
-
-    // Run menu logic once in case HTML is already on page (not fetched)
-    initMenuLogic();
   });
 
-  function createTrail(x, y) {
+  // Mouse Trail
+  document.addEventListener('mousemove', (e) => {
     const trail = document.createElement('div');
     trail.className = 'trail';
-    trail.style.left = x + 'px';
-    trail.style.top = y + 'px';
+    trail.style.left = e.clientX + 'px';
+    trail.style.top = e.clientY + 'px';
     document.body.appendChild(trail);
     setTimeout(() => trail.remove(), 800);
-  }
+  });
 </script>
  
 </body>
