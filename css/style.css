@@ -2093,6 +2093,13 @@
     .cnttitle{font-size: 30px;margin-top: -50px;}
     .cntactaddress{    padding: 50px; 
     margin: 40px 0 50px;}
+    .ftmenu {
+    padding-top: 50px;}
+    .header{ top: 5px;padding: 10px 20px;}
+    .ftmenu ul li {
+    margin: 0;
+    padding: 0;
+}.ftmenu h5{margin: 0 0 5px;}.ftmenu ul{ margin: 0;}
     .subtext{ font-size: 16px; margin:0 30px 30px ;} .subtext br{ display: none;}
     .form-control, input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], textarea, select{    padding: 10px 20px !important;}
 .herobanner h4{margin: 0 0 10px;}
