@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
   <title>Contact Us | XoraiNow</title>
   <meta name="description"
     content="Contact XoraiNow for ServiceNow implementation, consulting, staffing, or training. Offices in India, UAE, and USA.">
@@ -13,6 +14,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">
   <link href="css/style.css" rel="stylesheet" />
+  <style>
+    label{display: block; text-align: left;}
+  </style>
 </head>
 
 <body>
@@ -39,21 +43,21 @@
           <div class="row">
             <div class="col-md-6">
               <h3 class="cnttitle">Get in Touch</h3>
-              <form style="text-align: left;">
+            
+                <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Df600000HE9Mc" method="POST">
 
+                  <input type=hidden name="oid" value="00Df600000HE9Mc">
+                  <input type=hidden name="retURL" value="http://xorainow.com">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="firstName" class="form-label">First Name *</label>
-                      <input type="text" class="form-control" id="firstName" required
-                        >
+                      
+                        <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="lastName" class="form-label">Last Name *</label>
-                      <input type="text" class="form-control" id="lastName" required
-                        >
+                      <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" />
                     </div>
                   </div>
                 </div>
@@ -62,16 +66,12 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="email" class="form-label">Email *</label>
-                      <input type="email" class="form-control" id="email" required
-                        >
+                      <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" />
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input type="tel" class="form-control" id="phone"
-                        >
+                      <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" />
                     </div>
                   </div>
                 </div>
@@ -79,55 +79,26 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="company" class="form-label">Company *</label>
-                      <input type="text" class="form-control" id="company" required
-                        >
+                      <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" />
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="role" class="form-label">Role</label>
-                      <input type="text" class="form-control" id="role"
-                        >
+                      <label for="country">Country</label><input  id="country" maxlength="40" name="country" size="20" type="text" />
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="country" class="form-label">Country</label>
-                      <input type="text" class="form-control" id="country"
-                        >
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="help" class="form-label">How can we help? *</label>
-                      <select class="form-control" id="help" required
-                        >
-                        <option value="">Select an option</option>
-                        <option value="implementation">Implementation</option>
-                        <option value="consulting">Consulting</option>
-                        <option value="staffing">Staffing</option>
-                        <option value="training">Training</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="partnership">Partnership</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+                
 
 
 
 
 
                 <div class="mb-3">
-                  <label for="needs" class="form-label">Tell us about your needs</label>
-                  <textarea class="form-control" id="needs" rows="5"
-                    ></textarea>
+                  <label for="description">Description</label><textarea name="description"></textarea>
                 </div>
-                <button type="submit" class="btn btn-green">Send Message <i class="ri-arrow-right-line"></i></button>
+                <button type="submit" name="submit" class="btn btn-green">Send Message <i class="ri-arrow-right-line"></i></button>
               </form>
             </div>
             <div class="col-md-6">
