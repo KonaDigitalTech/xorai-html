@@ -1,67 +1,106 @@
-<div class="topbar">
-  <div class="">
-    <div class="header">
-      <h1><a href="https://xorainow.com/index.html"><img src="https://xorainow.com/images/logo.png" alt="XoraiNow" class="logo"></a></h1>
-      <div class="hamburger" id="menuToggle">
-        <i class="ri-menu-line"></i>
+<header class="site-header" data-elevate="false">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html" aria-label="Xorai home">
+      <img
+        class="brand-logo"
+        src="/assets/xorai-logo.png"
+        alt="Xorai Futuristic logo"
+        width="180"
+        height="50"
+        decoding="async"
+        loading="eager"
+      />
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-lines" aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" aria-expanded="false">
+          Services
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/services/edge-ai-deployment.html">Edge AI Deployment</a>
+          <a href="/services/computer-vision.html">Computer Vision</a>
+          <a href="/services/robotics-autonomous.html">Robotics &amp; Autonomous</a>
+          <a href="/services/sensor-fusion.html">Sensor Fusion</a>
+          <a href="/services/custom-ai-models.html">Custom AI Models</a>
+          <a href="/services/ai-readiness-assessment.html">AI Readiness Assessment</a>
+        </div>
       </div>
-      <nav id="mainNav">
-        <ul class="menu flex align-items-center">
-          <li class="dropdown">
-            <a href="https://xorainow.com/industries/index.html">Industries <i class="ri-arrow-down-s-line"></i></a>
-            <ul class="submenu">
-              <li><a href="https://xorainow.com/industries/financial-services.html">Financial Services</a></li>
-              <li><a href="https://xorainow.com/industries/retail.html">Retail</a></li>
-              <li><a href="https://xorainow.com/industries/healthcare.html">Healthcare</a></li>
-              <li><a href="https://xorainow.com/industries/energy.html">Energy</a></li>
-              <li><a href="https://xorainow.com/industries/education.html">Education</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="https://xorainow.com/solutions/index.html">Solutions <i class="ri-arrow-down-s-line"></i></a>
-            <ul class="submenu">
-              <li><a href="https://xorainow.com/solutions/it.html">IT Service Management (ITSM)</a></li>
-              <li><a href="https://xorainow.com/solutions/crm.html">Customer Relationship Management (CRM)</a></li>
-              <li><a href="https://xorainow.com/solutions/hr.html">HR Service Delivery (HRSD)</a></li>
-              <li><a href="https://xorainow.com/solutions/security-risk.html">Security & Risk (GRC)</a></li>
-              <li><a href="https://xorainow.com/solutions/finance.html">Finance & Operations</a></li>
-              <li><a href="https://xorainow.com/solutions/supply-chain.html">Supply Chain Management</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="https://xorainow.com/services/index.html">Services <i
-                class="ri-arrow-down-s-line"></i></a>
 
-            <ul class="submenu">
-              <li><a href="https://xorainow.com/services/implementation.html">Implementation</a></li>
-              <li><a href="https://xorainow.com/services/consulting.html">Consulting</a></li>
-              <li><a href="https://xorainow.com/services/staffing.html">Staffing</a></li>
-              <li><a href="https://xorainow.com/services/training.html">Training</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="https://xorainow.com/resources/index.html">Academy <i
-                class="ri-arrow-down-s-line"></i></a>
-            <ul class="submenu">
-              <li><a href="https://xorainow.com/academy/full-ai-stack.html">Full AI Stack</a></li>
-              <li><a href="https://xorainow.com/academy/physical-ai.html">Physical AI</a></li>
-              <li><a href="https://xorainow.com/academy/servicenow-ai-agents.html">ServiceNow AI Agents</a></li>
-          </li>
-        </ul>
-        </li>
-        <li class="dropdown"><a href="https://xorainow.com/company/index.html">Company <i
-              class="ri-arrow-down-s-line"></i></a>
-          <ul class="submenu">
-            <li><a href="https://xorainow.com/resources/blogs.html">Blogs</a></li>
-            <li><a href="https://xorainow.com/resources/documents.html">Documents</a></li>
-            <li><a href="https://xorainow.com/company/about.html">About Us</a></li>
-            <li><a href="https://xorainow.com/company/events.html">Events</a></li>
-            <li><a href="https://xorainow.com/company/careers.html">Careers</a></li>
-          </ul>
-        </li>
-        </ul>
-      </nav>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" aria-expanded="false">
+          Solutions
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/solutions/it.html">IT Service Management</a>
+          <a href="/solutions/crm.html">Customer Service</a>
+          <a href="/solutions/hr.html">HR Service Delivery</a>
+          <a href="/solutions/security-risk.html">Security &amp; Risk</a>
+          <a href="/solutions/finance.html">Finance &amp; Operations</a>
+          <a href="/solutions/supply-chain.html">Supply Chain Management</a>
+        </div>
+      </div>
 
-      <a href="https://xorainow.com/contact.html" class="btn btn-green">Let's talk <i
-          class="ri-smartphone-line"></i></a>
-    </div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" aria-expanded="false">
+          Academy
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/academy/full-ai-stack.html">Full AI Stack</a>
+          <a href="/academy/physical-ai.html">Physical AI</a>
+          <a href="/academy/servicenow-ai-agents.html">ServiceNow AI Agents</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" aria-expanded="false">
+          Industries
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/industries/fleet-logistics.html">Fleet &amp; Logistics</a>
+          <a href="/industries/oil-gas-mining.html">Oil &amp; Gas &amp; Mining</a>
+          <a href="/industries/manufacturing.html">Manufacturing</a>
+          <a href="/industries/warehousing.html">Warehousing</a>
+          <a href="/industries/campus-education.html">Campus &amp; Education</a>
+          <a href="/industries/public-transport.html">Public Transport</a>
+          <a href="/industries/construction.html">Construction</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link" aria-expanded="false">
+          Company
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/about.html">About Us</a>
+          <a href="/about/technology.html">Technology</a>
+          <a href="/about/careers.html">Careers</a>
+          <a href="/blog.html">Blog / Insights</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+
+      <a class="nav-cta" href="/demo.html">Get Started</a>
+    </nav>
   </div>
-</div>
+</header>
+

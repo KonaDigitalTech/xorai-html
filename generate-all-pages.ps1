@@ -1,0 +1,49 @@
+# PowerShell script to generate all remaining Xorai website pages
+# Run this script from the website root directory
+
+$navHTML = @'
+<header class="site-header" data-elevate="false"><div class="container header-inner"><a class="brand" href="/"><img class="brand-logo" src="ASSET_PATH/assets/xorai-logo.png" alt="Xorai" width="180" height="50"/></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span class="nav-toggle-lines"></span></button><nav class="site-nav"><div class="nav-item has-dropdown"><button class="nav-link" aria-expanded="false">Products <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="dropdown-menu"><a href="/products/xf-drive.html">XF Drive</a><a href="/products/xf-campus.html">XF Campus</a><a href="/products/xf-classroom.html">XF Classroom</a><a href="/products/xf-monitoring.html">XF Monitoring</a><a href="/products/platform.html">Platform</a><a href="/products/pricing.html">Pricing</a></div></div><div class="nav-item has-dropdown"><button class="nav-link" aria-expanded="false">AI Services <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="dropdown-menu"><a href="/services/edge-ai-deployment.html">Edge AI</a><a href="/services/computer-vision.html">Computer Vision</a><a href="/services/robotics-autonomous.html">Robotics</a><a href="/services/sensor-fusion.html">Sensor Fusion</a><a href="/services/custom-ai-models.html">Custom Models</a><a href="/services/ai-readiness-assessment.html">AI Assessment</a></div></div><div class="nav-item has-dropdown"><button class="nav-link" aria-expanded="false">Academy <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="dropdown-menu"><a href="/academy/full-ai-stack.html">Full AI Stack</a><a href="/academy/physical-ai.html">Physical AI</a><a href="/academy/servicenow-ai-agents.html">ServiceNow</a><a href="/academy/enterprise-training.html">Enterprise</a><a href="/academy/certifications.html">Certifications</a><a href="/academy/apply.html">Apply</a></div></div><div class="nav-item has-dropdown"><button class="nav-link" aria-expanded="false">Industries <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="dropdown-menu"><a href="/industries/fleet-logistics.html">Fleet</a><a href="/industries/oil-gas-mining.html">Oil & Gas</a><a href="/industries/manufacturing.html">Manufacturing</a><a href="/industries/warehousing.html">Warehousing</a><a href="/industries/campus-education.html">Campus</a><a href="/industries/public-transport.html">Transport</a><a href="/industries/construction.html">Construction</a></div></div><div class="nav-item has-dropdown"><button class="nav-link" aria-expanded="false">Company <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="dropdown-menu"><a href="/about.html">About</a><a href="/about/technology.html">Technology</a><a href="/about/careers.html">Careers</a><a href="/blog.html">Blog</a><a href="/contact.html">Contact</a></div></div><a class="nav-cta" href="/demo.html">Get Started</a></nav></div></header>
+'@
+
+$footerHTML = @'
+<footer class="site-footer"><div class="container footer-inner"><div class="footer-grid"><div class="footer-col"><h4>Products</h4><a href="/products/xf-drive.html">XF Drive</a><a href="/products/xf-campus.html">XF Campus</a><a href="/products/xf-classroom.html">XF Classroom</a><a href="/products/xf-monitoring.html">XF Monitoring</a><a href="/products/platform.html">Platform</a><a href="/products/pricing.html">Pricing</a></div><div class="footer-col"><h4>Services</h4><a href="/services/edge-ai-deployment.html">Edge AI</a><a href="/services/computer-vision.html">Computer Vision</a><a href="/services/robotics-autonomous.html">Robotics</a><a href="/services/sensor-fusion.html">Sensor Fusion</a><a href="/services/custom-ai-models.html">Custom Models</a><a href="/services/ai-readiness-assessment.html">AI Assessment</a></div><div class="footer-col"><h4>Academy</h4><a href="/academy/full-ai-stack.html">Full AI Stack</a><a href="/academy/physical-ai.html">Physical AI</a><a href="/academy/servicenow-ai-agents.html">ServiceNow</a><a href="/academy/enterprise-training.html">Enterprise</a><a href="/academy/certifications.html">Certifications</a><a href="/academy/apply.html">Apply</a></div><div class="footer-col"><h4>Company</h4><a href="/about.html">About</a><a href="/about/technology.html">Technology</a><a href="/blog.html">Blog</a><a href="/about/careers.html">Careers</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a></div></div><div class="footer-bottom"><div class="footer-left"><img src="ASSET_PATH/assets/xorai-logo.png" alt="Xorai" width="140" height="40"/><div class="footer-legal"><p>XORAI FUTURISTIC PRIVATE LIMITED</p><p>CIN: U62099AS2025PTC027602</p><p>© <span data-year>2026</span> Xorai Futuristic. All rights reserved.</p></div></div><div class="footer-social"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">YouTube</a></div></div></div></footer>
+'@
+
+function Generate-Page {
+    param(
+        [string]$Path,
+        [string]$Title,
+        [string]$Description,
+        [string]$H1,
+        [string]$Subtitle,
+        [string]$Content
+    )
+    
+    $depth = ($Path -split '/').Count - 1
+    $assetPath = if ($depth -eq 0) { "." } else { "../" * $depth }
+    $assetPath = $assetPath.TrimEnd('/')
+    
+    $nav = $navHTML -replace 'ASSET_PATH', $assetPath
+    $footer = $footerHTML -replace 'ASSET_PATH', $assetPath
+    
+    $html = @"
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#0A0A0F"/><meta name="description" content="$Description"/><title>$Title</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/><link rel="icon" type="image/png" href="$assetPath/assets/xorai-logo.png"/><link rel="stylesheet" href="$assetPath/styles.css"/></head><body><a class="skip-link" href="#main">Skip to content</a>$nav<main id="main"><section class="hero" style="min-height:60vh;"><div class="container hero-inner"><div class="hero-copy reveal"><h1>$H1</h1><p class="hero-subtitle">$Subtitle</p><div class="hero-actions"><a class="btn primary" href="/demo.html">Book a Demo</a><a class="btn secondary" href="/contact.html">Get in Touch</a></div></div></div></section>$Content<section class="section cta-section"><div class="container"><div class="cta-content reveal"><h2>Ready to Get Started?</h2><div class="cta-actions"><a class="btn primary large" href="/demo.html">Book a Demo</a><a class="btn secondary large" href="/contact.html">Contact Us</a></div></div></div></section></main>$footer<script src="$assetPath/app.js" defer></script></body></html>
+"@
+    
+    $html | Out-File -FilePath $Path -Encoding UTF8
+    Write-Host "Created: $Path"
+}
+
+# Define all pages to create
+$pages = @(
+    @{Path="products/platform.html"; Title="XF Platform — Unified Edge Intelligence | Xorai"; Description="The XF Platform powers all XF products with unified edge AI architecture."; H1="The XF Platform — <span class='accent'>Unified Edge Intelligence</span>"; Subtitle="One engine powering fleet safety, campus security, classroom analytics, and surveillance. Edge-first. Privacy-preserving. Enterprise-ready."; Content="<section class='section'><div class='container'><div class='section-head reveal'><h2>Platform Architecture</h2></div><div class='grid two'><div class='card reveal'><h3>Inference Engines</h3><p>ONNX-compatible, TensorRT-optimized models for edge NPUs</p></div><div class='card reveal'><h3>Sensor Fusion Layer</h3><p>Camera + GPS + IMU + LiDAR + Radar integration</p></div><div class='card reveal'><h3>Streaming Protocol</h3><p>Low-latency real-time event streaming over constrained networks</p></div><div class='card reveal'><h3>AI Agent Layer</h3><p>XF devices expose event streams as structured data feeds</p></div></div></div></section>"},
+    @{Path="products/pricing.html"; Title="Pricing | Xorai"; Description="Transparent pricing for XF Products and AI Services."; H1="Pricing"; Subtitle="Flexible pricing options for products and services."; Content="<section class='section'><div class='container'><div class='section-head reveal'><h2>Product Pricing</h2><p>Contact us for custom quotes based on your fleet size and requirements.</p></div><div class='grid three'><div class='card reveal'><h3>Cloud (SaaS)</h3><p>Hardware + cloud subscription</p><a class='btn secondary' href='/contact.html'>Get Quote</a></div><div class='card reveal'><h3>On-Premise</h3><p>Hardware + on-premise license</p><a class='btn secondary' href='/contact.html'>Get Quote</a></div><div class='card reveal'><h3>Enterprise</h3><p>Custom SLA + dedicated support</p><a class='btn secondary' href='/contact.html'>Get Quote</a></div></div></div></section>"}
+)
+
+# Create each page
+foreach ($page in $pages) {
+    Generate-Page -Path $page.Path -Title $page.Title -Description $page.Description -H1 $page.H1 -Subtitle $page.Subtitle -Content $page.Content
+}
+
+Write-Host "`nPage generation complete! Created $($pages.Count) pages."
+Write-Host "`nTo create remaining pages, add more entries to the `$pages array and run again."
