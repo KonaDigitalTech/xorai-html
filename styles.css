@@ -358,12 +358,81 @@ main {
   font-size: 1.25rem;
 }
 
+.career-meta {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.career-meta p {
+  margin-top: 12px;
+}
+
+.career-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 179, 0, 0.12);
+  border: 1px solid rgba(255, 179, 0, 0.35);
+  color: var(--accent-primary);
+}
+
+.company-logos-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.company-logos {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 24px;
+  animation: scroll-logos 30s linear infinite;
+}
+
+.company-logo-pill {
+  min-width: 150px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: radial-gradient(circle at top left, rgba(255, 179, 0, 0.14), rgba(20, 20, 32, 0.9));
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+.company-logo-pill:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  box-shadow: 0 14px 34px rgba(255, 179, 0, 0.4);
+}
+
+@keyframes scroll-logos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .hero {
   position: relative;
   min-height: 90vh;
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
+  padding: 120px 0 0px;
   overflow: hidden;
 }
 
@@ -1376,4 +1445,81 @@ main {
 .popupWhatsApp:hover {
   opacity: 0.9;
   color: #fff;
+}.logo-marquee {
+  margin: 0 !important;
+  padding: 0;
 }
+.logo-marquee, .toolrow {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-marquee,.toolrow {
+  overflow: hidden;
+  position: relative
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+.logo-marquee.left .marquee-track {
+  animation-name: marquee-left
+}
+
+.logo-marquee.right .marquee-track {
+  animation-name: marquee-right
+}
+
+@keyframes marquee-left {
+  0% {
+      transform: translateX(0)
+  }
+
+  100% {
+      transform: translateX(-50%)
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+      transform: translateX(-50%)
+  }
+
+  100% {
+      transform: translateX(0)
+  }
+}
+.trusted ul { list-style-type: none;}
+.trusted ul li img {
+  filter: grayscale(100%);
+  max-height: 35px !important;
+}
+.trusted ul li {
+  padding: 0 30px 30px;
+}
+.logo-marquee::before {
+  right: 0;
+  content: "";
+  z-index: 3;
+  background: linear-gradient(90deg, transparent, #15120e);
+}
+.logo-marquee::after {
+  left: 0;
+  content: "";
+  background: linear-gradient(90deg, #15120e, transparent);
+}
+
+.logo-marquee::after, .logo-marquee::before {
+  width: 400px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+.trusted h5{ text-align: center; font-size: 30px; margin: 0 0 10px 0;}
+.trusted p{ text-align: center; margin: 0 0 40px 0;}
