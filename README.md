@@ -63,7 +63,7 @@ website/
 ├── README.md                               ✅ Complete
 ├── WEBSITE_IMPLEMENTATION_GUIDE.md         ✅ Complete
 ├── assets/
-│   └── xorai-logo.png                      (existing)
+│   └── logo.png                      (existing)
 ├── products/
 │   └── index.html                          ✅ Complete
 ├── services/                               (folder created, pages pending)
